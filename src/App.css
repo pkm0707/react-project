@@ -1,38 +1,169 @@
-.App {
+/* Colorbox */
+.colorbox{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  margin-top:0px;
+  background-image: url(https://www.bitdegree.org/learn/storage/media/images/57bb1705-3ac9-41e3-9e97-37d4ee5771ac.o.jpg);
+}
+.inbutton{
+  display: flex;
+  align-items: center;
+}
+/* Colorbox -----------------------------------------*/
+
+/* Profile-Pic */
+img.img1{
+  width: 150px;
+  height: 150px;
+  object-fit:cover;
+  border-radius: 125px;
+  padding:10px 10px 0px 10px;
+}
+.button1{
+  margin: 0px 10px 10px 0px;
+}
+.profile-container{
+  padding:30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+  background-color: black;
   text-align: center;
 }
+/* Profile-Pic ------------------------------------ */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Product-list */
+.container{
+  width:300px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.spec{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  height: 45px;
+}
+.poster{
+  width:300px;
+  height:300px;
+  object-fit: contain;
+  border: 3px solid black;
+  border-radius: 0px;
+  padding: 10px;
+}
+.price{
+  margin-top: 0px;
+}
+.list{
+  margin: 10px;
+  padding:10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+}
+.button-flex{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+}
+/* Product-list --------------------------------------- */
+
+/* Home */
+.title{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-image: url(https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg);
+}
+.button-p{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  column-gap: 10px;
+  padding: 10px;
+}
+/* Home ------------------------------------------------ */
+
+/* Add Product */
+.add-product{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  padding: 20px;
+  background-image: url(https://www.lambertgroupproductions.com/canyon/wordpress_full_screen_background/images/bulletsFullWidth/03_bullets.jpg);
+}
+/* Add Product ------------------------------------------*/
+
+/* Notes flow*/
+.news-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+.news-container .title {
+  position: absolute;
+  background: #df2020;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
   color: white;
+  font-weight: bold;
+  z-index: 200;
 }
 
-.App-link {
-  color: #61dafb;
+.news-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  animation: scroll 25s infinite linear;
 }
 
-@keyframes App-logo-spin {
+.news-container ul li {
+  white-space: nowrap;
+  padding: 10px 24px;
+  color: #494949;
+  position: relative;
+}
+
+.news-container ul li::after {
+  content:"";
+  width: 1px;
+  height: 100%;
+  background: #b8b8b8;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.news-container ul li:last-child::after {
+  display: none;
+}
+
+@keyframes scroll {
   from {
-    transform: rotate(0deg);
+      transform: translateX(100%);
   }
+
   to {
-    transform: rotate(360deg);
+      transform: translateX(-1083px);
+
   }
 }
+/* Notes flow-------------------------------------------*/
